@@ -28,6 +28,19 @@ url: https://takis-kapas.github.io # the base hostname & protocol for your site,
 twitter_username: pkapasakalidis
 github_username:  takis-kapas
 
+# Navigation
+urls:
+    - text: Home
+      url: /
+    - text: About
+      url: /about
+    - text: Experience
+      url: /blog
+    - text: Projects
+      url: /gallery
+    - text: Contact
+      url : /shop
+
 # Build settings
 theme: minima
 remote_theme: pages-themes/slate@v0.2.0
