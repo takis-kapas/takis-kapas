@@ -28,6 +28,7 @@ url: https://takis-kapas.github.io # the base hostname & protocol for your site,
 twitter_username: pkapasakalidis
 github_username:  takis-kapas
 
+<<<<<<< HEAD
 # Navigation
 urls:
     - text: Home
@@ -108,6 +109,8 @@ paginate: 4
 per_page: 4
 paginate_path: "/blog/page/:num/"
 
+=======
+>>>>>>> parent of e1ba45d (Update _config.yml)
 # Build settings
 theme: minima
 remote_theme: pages-themes/slate@v0.2.0
