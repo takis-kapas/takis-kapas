@@ -44,14 +44,19 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
-author: John Doe
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
-hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+author_logo: author.png
+author: Takis Kapasakalidis
+author_bio: I am a DevOps Technical Architect with more than ten years of experience supporting Agile teams in the healthcare industry. I work closely with business and technical leaders on identifying requirements to apply best practices for their software development lifecycle, though the implementation of appropriate methodologies and workflows for code management, build and release deployment, and IaC operations. My specialization is on DevSecOps strategy and administration of complex environments and operations on Azure DevOps Services and GitHub Enterprise Cloud EMU platforms. 
+author_email: "pkapasakalidis@gmail.com"
+author_location: Wilmington, Massachusetts
+author_website_url: ""
+typewrite-text: Typewrite Test
+hero_cover_img: Bentley_Logo.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+
+# Choose what to show ( can be true or false)
+show_author_work_experiences: true
+show_author_education_details: true
+show_author_project_details: true
 
 # Experiences
 author_work_experiences:
@@ -70,11 +75,17 @@ author_work_experiences:
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: Bentley_Logo.png
+                college_name: Bentley University
+                college_url: https://www.bentley.edu/
+                college_degree: MSIT
+                description: Masters of Science in Information Technology
+                visibility: true
+              - college_logo: ACG_Logo.jpg
+                college_name: American College of Greece (DEREE)
+                college_url: https://www.acg.edu/
+                college_degree: BS in MSIT
+                description: Bachelor of Science in Information Technology
                 visibility: true
 
 # Projects

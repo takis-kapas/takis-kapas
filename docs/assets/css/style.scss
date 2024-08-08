@@ -3,35 +3,40 @@
 
 @import "jekyll-theme-slate";
 
-/* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #4d5250;
-    color: white;
-  }
+background-color: #333;
+overflow: hidden;
+}
 
-/* devlopr-jekyll styling */
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #4d5250;
+color: white;
+}
+
+// External developr-jekyll
+.card {
+    margin: 20px !important;
+    padding: 20px !important;
+    background-color: var(--card-background-color) !important;
+}
+
 #profile-card {
     text-align: center;
     #author-img{
@@ -71,3 +76,28 @@
     }
 
 }
+
+#author_projects {
+    .project-img {
+        width: 300px;
+        height: 200px;
+    }
+    #project-card{
+        margin-top:30px;
+    }
+    .project-link{
+        color: var(--link-color);
+    }
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.author-profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+

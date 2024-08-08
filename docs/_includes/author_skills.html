@@ -1,2 +1,39 @@
-<p> HTML , CSS , Javascript , PHP, Python, C</p>
-<p> Adobe XD, Inkscape, Git, Linux </p>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js">
+</script>
+
+<p> <b>DevOps Platforms: </b>Azure DevOps Services, GitHub Enterprise Cloud, Team Foundation Server, Jira</p>
+<script>
+    const ctx = document.getElementById('platforms');
+  
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['ADO', 'GHEC', 'TFS', 'JIRA'],
+        datasets: [{
+          label: 'Platform Experience %',
+          data: [60,30,5,5],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+<div> 
+    <canvas id="platforms" style="width:100%;max-width:700px"></canvas>
+</div>
+<p> <b>DevOps Security Tools: </b>Veracode, GitHub Advanced Security, SonarQube</p>
+<p> <b>IaC Tools: </b>Terraform, ARM Templates, Bicep</p>
+<p> <b>Markup Languages: </b>YAML, Markdown, HTML, XML, CSS</p>
+<p> <b>Programming Languages: </b>.NET, ASP.NET, Python, Java, JavaScript</p>
+<p> <b>Scripting Languages: </b>PowerShell, Bash</p>
+<p> <b>REST API Tools: </b>Postman, Swagger, SoapUI </p>
+<p> <b>CLI Tools: </b>Azure CLI, Azure DevOps CLI, cURL, OC CLI </p>
+<p> <b>IDE Tools: </b>Visual Studio, Visual Studio Code</p>
+<p> <b>Container Platforms: </b>Docker, OpenShift </p>
