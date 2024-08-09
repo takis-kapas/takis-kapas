@@ -1,39 +1,41 @@
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js">
-</script>
-
-<p> <b>DevOps Platforms: </b>Azure DevOps Services, GitHub Enterprise Cloud, Team Foundation Server, Jira</p>
-<script>
-    const ctx = document.getElementById('platforms');
-  
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['ADO', 'GHEC', 'TFS', 'JIRA'],
-        datasets: [{
-          label: 'Platform Experience %',
-          data: [60,30,5,5],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  </script>
-<div> 
-    <canvas id="platforms" style="width:100%;max-width:700px"></canvas>
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="platforms"></canvas>
 </div>
-<p> <b>DevOps Security Tools: </b>Veracode, GitHub Advanced Security, SonarQube</p>
-<p> <b>IaC Tools: </b>Terraform, ARM Templates, Bicep</p>
-<p> <b>Markup Languages: </b>YAML, Markdown, HTML, XML, CSS</p>
-<p> <b>Programming Languages: </b>.NET, ASP.NET, Python, Java, JavaScript</p>
-<p> <b>Scripting Languages: </b>PowerShell, Bash</p>
-<p> <b>REST API Tools: </b>Postman, Swagger, SoapUI </p>
-<p> <b>CLI Tools: </b>Azure CLI, Azure DevOps CLI, cURL, OC CLI </p>
-<p> <b>IDE Tools: </b>Visual Studio, Visual Studio Code</p>
-<p> <b>Container Platforms: </b>Docker, OpenShift </p>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="security"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="iac"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="markup"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="programming"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="scripting"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="rest"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="cli"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="ide"></canvas>
+</div>
+<hr style="height:30px">
+<div class="chart-container" style="position: relative; height:40vh; width:80vw"> 
+    <canvas id="container"></canvas>
+</div>
+<hr style="height:30px">
+{%- include charts.html -%}

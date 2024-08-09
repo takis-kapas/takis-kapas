@@ -1,0 +1,455 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('platforms');
+  
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['ADO', 'GHEC', 'TFS', 'JIRA'],
+        datasets: [{
+          label: 'Platform Experience %',
+          data: [60,30,5,5],
+          backgroundColor: [
+            'rgb(0, 138, 215)',
+            'rgb(128, 128, 128)',
+            'rgb(255, 178, 102)',
+            'rgb(179, 186, 197)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'DevOps Platforms',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx2 = document.getElementById('security');
+  
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Veracode', 'GitHub Advanced Security', 'SonarQube'],
+        datasets: [{
+          label: 'DevOps Security Tools %',
+          data: [30,60,10],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'DevOps Security Tools',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx3 = document.getElementById('iac');
+  
+    new Chart(ctx3, {
+      type: 'pie',
+      data: {
+        labels: ['Terraform', 'ARM Templates', 'Bicep'],
+        datasets: [{
+          label: 'IaC %',
+          data: [30,50,20],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'IaC Tools',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx4 = document.getElementById('markup');
+  
+    new Chart(ctx4, {
+      type: 'pie',
+      data: {
+        labels: ['YAML', 'Markdown', 'HTML', 'XML', 'CSS'],
+        datasets: [{
+          label: 'Markup Languages %',
+          data: [60,20,10,5,5],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)',
+            'rgb(255, 33, 33)',
+            'rgb(25, 33, 33)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'Markup Languages',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx5 = document.getElementById('programming');
+  
+    new Chart(ctx5, {
+      type: 'pie',
+      data: {
+        labels: ['.NET', 'ASP.NET', 'Python', 'Java', 'JavaScript'],
+        datasets: [{
+          label: 'Programming Languages %',
+          data: [30,15,15,10,30],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)',
+            'rgb(255, 33, 33)',
+            'rgb(25, 33, 33)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'Programming Languages',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx6 = document.getElementById('scripting');
+  
+    new Chart(ctx6, {
+      type: 'pie',
+      data: {
+        labels: ['PowerShell', 'Bash'],
+        datasets: [{
+          label: 'Scripting Languages %',
+          data: [80, 20],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'Scripting Languages',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx7 = document.getElementById('rest');
+  
+    new Chart(ctx7, {
+      type: 'pie',
+      data: {
+        labels: ['Postman', 'Swagger', 'SoapUI'],
+        datasets: [{
+          label: 'REST API Tools %',
+          data: [75, 20, 5],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'REST API Tools',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx8 = document.getElementById('cli');
+  
+    new Chart(ctx8, {
+      type: 'pie',
+      data: {
+        labels: ['Azure CLI', 'Azure DevOps CLI', 'cURL', 'OC CLI'],
+        datasets: [{
+          label: 'CLI Tools %',
+          data: [45, 45, 5, 15],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)',
+            'rgb(255, 33, 33)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'CLI Tools',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx9 = document.getElementById('ide');
+  
+    new Chart(ctx9, {
+      type: 'pie',
+      data: {
+        labels: ['Visual Studio', 'Visual Studio Code'],
+        datasets: [{
+          label: 'IDE Tools %',
+          data: [40, 60],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'IDE Tools',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>
+<script>
+    const ctx10 = document.getElementById('container');
+  
+    new Chart(ctx10, {
+      type: 'pie',
+      data: {
+        labels: ['Docker', 'OpenShift'],
+        datasets: [{
+          label: 'Container Platforms %',
+          data: [40, 60],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)'
+            ],
+          hoverOffset: 4,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins:{
+            title: { 
+                display: true,
+                text: 'Container Platforms',
+                align: 'start',
+                font: { 
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: { 
+                display: true, 
+                position: 'top'
+            }
+        },
+        animation: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    });
+</script>

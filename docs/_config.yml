@@ -31,8 +31,8 @@ github_username:  takis-kapas
 urls:
     - text: Home
       url: /
-    - text: About
-      url: /about
+    - text: Skills
+      url: /skills
     - text: Experience
       url: /experience
     - text: Projects
@@ -60,17 +60,19 @@ show_author_project_details: true
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
+            - company_name: Mass General Brigham
+              company_logo: mgb.jpeg
+              company_url: https://www.massgeneralbrigham.org/
+              designation: DevOps Technical Architect
+              description: Leading strategic initiatives for the “Journey to Cloud” migration requirements on Azure DevOps Services and GitHub Enterprise Cloud
+              long_description: architect.html
               visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
+            - company_name: Mass General Brigham
+              company_logo: mgb.jpeg
+              company_url: https://www.massgeneralbrigham.org/
+              designation: Sr. Project Specialist
+              description: Designed, published, and communicated TFS and Azure DevOps governance and policies around Project Management, Source Code Management, CI/CD deployment, and Test execution
+              long_description: architect.html
               visibility: true
 
 # Education
