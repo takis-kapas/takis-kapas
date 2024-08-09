@@ -21,8 +21,8 @@ After the Custom Metrics Autoscaler is enabled in the OpenShift cluster, the fol
 
 OpenShift Pods are created using a Docker image built from the official Microsoft Hosted Agent [Ubuntu:22.04](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md) and [Ubuntu:24.04](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md) GitHub repo. These images have been "translated" to be build with a Dockerfile in an ADO YAML Pipeline. Upon image built, the images are uploaded to an OpenShift Namespace imagestream where they are made available for use in ScaledJob container spec templates.
 
-### Solution Benefits
-- Efficiently update and maintain Azure DevOps container agent container images
+### Value Added
+- Efficiently update and maintain Azure DevOps agent container images
 - Rolling updates of image updates
 - Autoscaling of Ephemeral ADO Agents based on Pipeline parallel jobs
 - Auto Onboarding and Offbording Ephemeral ADO Agents per Pipeline Job
@@ -61,7 +61,7 @@ In GHEC, Organization-level logs can only be maintained for up to 400 days. Disp
 
 The ADO & GHEC Log Monitor solution allows to overcome the above issues with logging as well as align with the InfoSec's log retainment directive of at least 12 months of Logs.
 
-### Solution Benefits
+### Value Added
 - Organization, Project/Repo, and Agent/Runner level logs in one place
 - Easier retrieval of logs for trends and troubleshooting
 - Function representation of logs in queries and dashboard for Admin and Managerial level of access
@@ -102,4 +102,17 @@ The SQL Serverless Pool will in turn be queried by PowerBi defined Reports and D
 | :---: | :---: | :---: | :---: | 
 | ![image](assets/img/projects/ado.png) | ![image](assets/img/projects/boards.png) | ![image](assets/img/projects/powershell.png) | ![image](assets/img/projects/function-app.png) |
 
-The solution allows the provisioning of ADO and GHEC resources from the submission of an ADO Work Item (Change Request - CMMI teamplate).
+The solution allows the provisioning of ADO and GHEC resources from the submission of an ADO Work Item (Change Request - CMMI teamplate). It allows a user who is not either a Project Administrator or a Project Collection Administrator to easily provision resources in ADO and GHEC, based on pre-defined templates.
+
+### Value Added
+- Standardizes the provision of resources to ADO and GHEC
+- Allows for non-admin users to provision resources (with managed Quality Gates and Admin Approvals for the Pipeline Provisioning)
+- Aligns the provisioning of these resources with the SDLC tracking process of ADO.
+- Increases accountability and traceability of provisioned resources and approval in ADO.
+- Allow for configuration drift when provisioning templates need modification.
+
+### Solution Architecture
+It uses a Work Item with custom fields to retrieve input values from a user. When the WI changes state to "Active" a Project webhook posts the Work Item data to an Azure Service Bus which is linked with an HTTP Triggered Function App. The Function App runs PowerShell code which determines what ADO or GHEC resource to build and then sends a REST request to the associated ADO Pipeline to build the resource. Upon successful execution, the Pipeline is linking the provisioned resource URL to the Work Item and changes the Work Item state to "Resolved".
+
+![lm](assets/img/projects/provisioning.png)
+

@@ -21,11 +21,11 @@
 title: Takis Kapasakalidis - Personal Site
 email: pkapasakalidis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Information about experience, projects, certifications
+  Information about skilld, experience, projects, certifications
 domain: takis-kapas.github.io
 baseurl: /takis-kapas # the subpath of your site, e.g. /blog
 url: https://takis-kapas.github.io # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: pkapasakalidis
+linkedin_username: panagiotis-kapasakalidis-6b5b0322
 github_username:  takis-kapas
 
 urls:
@@ -39,8 +39,6 @@ urls:
       url: /projects
     - text: Certifications
       url : /certifications
-    - text: Contact
-      url : /contact
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
@@ -113,6 +111,7 @@ plugins:
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-figure
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
