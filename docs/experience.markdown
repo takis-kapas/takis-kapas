@@ -16,6 +16,7 @@ classes: wide
 - Using PowerShell REST API development and ADO/GHEC CLIs to design and implement ADO/GHEC Administration automation services that reduced configuration overhead and onboarding time for new ADO Projects, ADO Teams, and GHEC Repos.
 - Designed and implemented ADO and GHEC enhanced reporting services (pulling usage data on ADO Organizations, Projects, Git commit/pull requests, Build/Release Pipeline Runs, GitHub Issues, and GitHub Repo Policy changes) using Service Hooks, Azure Service Bus, Azure Event Hub, Azure HTTP-triggered Functions, Azure Cosmos DB, Azure Synapse Analytics, and PowerBI Data Sets/Dashboards.
 
+
 ## Mass General Brigham
 
 ### Sr. Project Specialist
@@ -27,14 +28,6 @@ classes: wide
 - Developed, administered, and maintained the DEV environment of Team Foundation Server for Requirements, Bugs, and Issues tracking. Automated frequent migration of data from PROD to DEV for testing. Data migrated and represented on SharePoint Server through SSRS reports and custom forms.
 - Successfully migrated our Team Foundation Server environment (5 Organizations, 120 Projects, 1000 users) to Azure DevOps Services, using 3rd-party migration tools (OpsHub) and Microsoft native migration tools (Data Migration Tool for ADO).
 
-## Charter Communications (Navisite)
-
-### Sr. IT Architect
-
-[![Navisite](assets/img/experience/navisite.jpeg)](https://www.navisite.com/)
-
-- Formulated and reviewed new cloud platform, software, tools and technical methodologies for professional services offerings and delivery capabilities.
-- Provided deep subject matter expertise and leadership for hyper scale public cloud, VMware cloud solutions and cloud migration technology domains. Formulated criteria for and executed proofs-of-concept for new approaches and platforms.
 
 ## Mass General Brigham
 
@@ -45,6 +38,7 @@ classes: wide
 - Managing cluster storage on HPE 3PAR 8000 SSD blocks including CPGs, VVs, WWNs, FC connections.
 - Building Production VM custom images configured with VPN access (Express Route to be configured later this year). Deployed Azure Dev/Test Labs to developer and tester groups for self-provisioning VMs. Developing Azure Automation scripts to streamline the VM deployment and configuration process and to minimize organizational cost on the VM weekly operation schedule. Building an Azure ASE (App Service Environment) for migrating on-prem Web Apps to Azure.
 
+
 ## Mass General Brigham
 
 ### QA Systems Test Engineer
@@ -53,6 +47,7 @@ classes: wide
 
 - Provided QA leadership on internal teams and applied QA best practices for Requirements gathering and testing (Unit, Integration, Regression, Performance, UAT) for Partners Epic Financial and Clinical implementation. 
 - Designed, developed, and administered a Hyper-V High-Availability Failover Cluster and virtualized the QA critical infrastructure (~200 VMs). Through VMM policy deployment, managed to increase efficiency by 100% and decrease cost by 500%.
+
 
 ## Smith & Nephew
 

@@ -21,7 +21,7 @@
 title: Takis Kapasakalidis - Personal Site
 email: pkapasakalidis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Information about skilld, experience, projects, certifications
+  Information about skills, experience, projects, and certifications
 domain: takis-kapas.github.io
 baseurl: /takis-kapas # the subpath of your site, e.g. /blog
 url: https://takis-kapas.github.io # the base hostname & protocol for your site, e.g. http://example.com

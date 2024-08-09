@@ -3,7 +3,7 @@ title: projects
 permalink: /projects/
 classes: wide
 ---
-## Azure DevOps Self-Hosted Ephemeral Agents
+## ADO Self-Hosted Ephemeral Agents
 
 ### Providing Ephemeral ADO Self-Hosted Agents running in OpenShift Docker Containers with Customer Metrics Autoscale (KEDA) for Azure Pipelines
 

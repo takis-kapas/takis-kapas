@@ -453,3 +453,51 @@
       }
     });
 </script>
+<script>
+  const ctx11 = document.getElementById('reporting');
+
+  new Chart(ctx11, {
+    type: 'pie',
+    data: {
+      labels: ['ADO OData Analytics', 'PowerBI', 'Azure Monitor', 'Datadog', 'Splunk', 'Dynatrace'],
+      datasets: [{
+        label: 'Reporting Tools %',
+        data: [40, 20, 20, 10, 5, 5],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(255, 33, 33)',
+          'rgb(25, 33, 33)',
+          'rgb(255, 120, 120)'
+          ],
+        hoverOffset: 4,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      plugins:{
+          title: { 
+              display: true,
+              text: 'Reporting Tools',
+              align: 'start',
+              font: { 
+                  size: 20,
+                  weight: 'bold'
+              }
+          },
+          legend: { 
+              display: true, 
+              position: 'top'
+          }
+      },
+      animation: false,
+      scales: {
+        y: {
+          min: 0,
+          max: 100
+        }
+      }
+    }
+  });
+</script>
