@@ -44,7 +44,7 @@ urls:
 
 author_logo: author.png
 author: Takis Kapasakalidis
-author_bio: I am a DevOps Technical Architect with more than ten years of experience supporting Agile teams in the healthcare industry. I work closely with business and technical leaders on identifying requirements to apply best practices for their software development lifecycle, though the implementation of appropriate methodologies and workflows for code management, build and release deployment, and IaC operations. My specialization is on DevSecOps strategy and administration of complex environments and operations on Azure DevOps Services and GitHub Enterprise Cloud EMU platforms. 
+author_bio: I am a DevOps Technical Architect with more than ten years of experience supporting Agile teams in the healthcare industry. <p>I work closely with business and technical leaders on identifying requirements to apply best practices for their software development lifecycle, though the implementation of appropriate methodologies and workflows for code management, build and release deployment, and IaC operations. <p>My specialization is on DevSecOps strategy and administration of complex environments and operations on Azure DevOps Services and GitHub Enterprise Cloud EMU platforms. 
 author_email: "pkapasakalidis@gmail.com"
 author_location: Wilmington, Massachusetts
 author_website_url: ""
