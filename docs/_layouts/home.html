@@ -95,7 +95,8 @@ classes: wide
     {% if site.author_bio %}
         <div class="card">
           <h1 class="card-title">About</h1>
-          <p>{{ site.author_bio }}</p>
+          <!-- <p>{{ site.author_bio }}</p> -->
+          {%- include aboutme.html -%}
         </div>
         {% endif %}
   </div>
