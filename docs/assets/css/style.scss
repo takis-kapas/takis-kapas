@@ -162,5 +162,6 @@ img[alt=image-full] {
 @media (max-width: 800px) {
     .flex-container {
       flex-direction: column;
+      flex-wrap: wrap;
     }
   }
