@@ -116,3 +116,25 @@ It uses a Work Item with custom fields to retrieve input values from a user. Whe
 
 ![lm](assets/img/projects/provisioning.png)
 
+## ADO Change Management Integration with ServiceNow
+
+### Using Release Pipeline Quality Gates to determine deployment to a Pipeline Stage based on ServiceNow Change Request State transitions
+
+| ADO | ServiceNow | Pipelines |
+| :---: | :---: | :---: |
+| ![image](assets/img/projects/ado.png) | ![image](assets/img/projects/servicenow.png) | ![image](assets/img/projects/pipelines.png) |
+
+The solution provides integration between ADO and ServiceNow platforms in respect to Change Management and Release workflows. It allows for tight release stage controls based on ServiceNow Change Request states, using REST API calls for the evaluation of retrieved state samples in pre-prod Quality Gate.
+
+### Value Added
+- Align ServiceNow Change Request workflow with ADO Release workflow for increased traceability
+- Initiate deployment to production based on ServiceNow Change Request state implementation window
+- Prevent unauthorized deployments to production from the release pipeline
+- Change state of ServiceNow Change Request based on outcome of release pipeline stage
+
+### Solution Architecture
+To integrate ADO and ServiceNow, ADO requires the installation of the [ServiceNow Change Management extension](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.vss-services-servicenowchangerequestmanagement). This extension enables the ServiceNow OAuth2 authentication configuration in the ADO Organization which will be integrated with the ServiceNow platform. Once OAuth2 configuration is set, then an ADO Pipeline stage can be configured with the ServiceNow Change Management Pre-Deployment Gate which maps to the ServiceNow Change Request fields. Once the Gate is enabled, before the pipeline stage runs, it evaluates the ServiceNow predeployment gate based on the evaluation options, sucess criteria, and desired status of ServiceNow Change Request.
+
+The evaluation takes place in the form of REST API (GET) calls to the ServiceNow Change Request API. The ADO Quality Gate collects samples in a defined interval (minimum 5 minutes) to determine the Change Request state based on quality gate success criteria. If the success criteria are satisifed after two consequent 5-minute samples, then the Pipeline stage proceeds with the deployment.
+
+The Pipeline stage can be configured with an Agentless Task, which uses the "Update ServiceNow Change Request" Task to change the state of the linked ServiceNow Change Request to "Support". This Task also adds a "Work Note" to the ServiceNow Change Request with the Pipeline Release name, Team Project, and link to the Pipeline run.
