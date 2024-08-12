@@ -114,7 +114,7 @@ The solution allows the provisioning of ADO and GHEC resources from the submissi
 ### Solution Architecture
 It uses a Work Item with custom fields to retrieve input values from a user. When the WI changes state to "Active" a Project webhook posts the Work Item data to an Azure Service Bus which is linked with an HTTP Triggered Function App. The Function App runs PowerShell code which determines what ADO or GHEC resource to build and then sends a REST request to the associated ADO Pipeline to build the resource. Upon successful execution, the Pipeline is linking the provisioned resource URL to the Work Item and changes the Work Item state to "Resolved".
 
-![lm](assets/img/projects/provisioning.png)
+![provisioning](assets/img/projects/provisioning.png)
 
 ## ADO Change Management Integration with ServiceNow
 
@@ -138,3 +138,31 @@ To integrate ADO and ServiceNow, ADO requires the installation of the [ServiceNo
 The evaluation takes place in the form of REST API (GET) calls to the ServiceNow Change Request API. The ADO Quality Gate collects samples in a defined interval (minimum 5 minutes) to determine the Change Request state based on quality gate success criteria. If the success criteria are satisifed after two consequent 5-minute samples, then the Pipeline stage proceeds with the deployment.
 
 The Pipeline stage can be configured with an Agentless Task, which uses the "Update ServiceNow Change Request" Task to change the state of the linked ServiceNow Change Request to "Support". This Task also adds a "Work Note" to the ServiceNow Change Request with the Pipeline Release name, Team Project, and link to the Pipeline run.
+
+![snow](assets/img/projects/ado-snow-cm-integration.png)
+
+## GHEC EMU "main" Branch Policy Protection
+
+### Protecting the "main" Branch of each repository from unauthorized/accidental deletion or change on protected rules
+
+**NOTE**: This solution was developed and enforced prior to GitHub providing the modern [branch rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) on the Enterprise, Organization, and Repository levels.
+
+| GHEC | Front Door | Function App |
+| :---: | :---: | :---: |
+| ![image](assets/img/projects/github.png) | ![image](assets/img/projects/front-door.png) | ![image](assets/img/projects/function-app.png) |
+
+The solution allows GHEC Enterprise and Organization Administrators to set an "enforced" branch policy for the "main" branch of each GHEC EMU Enterprise so that users with repo "admin" role cannot intentionally or accidentally delete the "main" branch and/or override "protected" branch policy rules. Repo Admins are however allowed to add extra rules to the "main" branch policy.
+
+### Value Added
+- Overcome the repository "admin" role GHEC limitation where repo "admin" can delete and/or change branch policy protections and/or rules.
+- Uniformely protect the "main" branch of each GHEC EMU repo in all managed Organizations
+- Allow for added-on protection rules in the "main" branch policy protection, while retaining and enforcing the "protected" rules
+
+### Solution Architecture
+The solution is using an Enterprise set Webhook which is set to monitor for "branch protection rules" events. The webhook is also "linked" with an Azure Front Door URL where it is sendign the payload whenever it is triggered by the set event.
+
+In Azure, the Azure Front Door is receiving the payload from GHEC and then based on Rule Sets, it forward the payload to one of the two HTTP-Triggered Function Apps which are set on Azure Front Door through Origin Groups.
+
+These two HTTP-Triggered Function Apps are set in an "active-active" setting to provide geo-reduduncy to the solution. When the Function App retrieves the payload from Azure Front Door, it runs a PowerShell script which based on the payload content, it calls back the GHEC Repo from which the "policy change" event originated, and through GitHub REST APIS, either it restores the "main" branch policy if it has been deleted, or restores the individual policy rules inside the "main" branch policy object, if they have been changed fron the values enforced.
+
+![protection](assets/img/projects/ghec-branch-policy.png)
