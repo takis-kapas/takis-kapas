@@ -6,7 +6,7 @@ classes: wide
 ---
 
 
-
+[![image-large](assets/img/certifications/terraform-associate.png)](https://www.credly.com/badges/3aeb124f-49d6-4e18-8f2a-2fc26e4147bd/public_url){:target="_blank"}
 [![image-large](assets/img/certifications/azure-devops-expert.svg)](https://learn.microsoft.com/api/credentials/share/en-us/TakisKapasakalidis-7137/D513448A0305C0F?sharingId=FD232711C049BAC){:target="_blank"}
 [![image-large](assets/img/certifications/azure-admin.png)](https://learn.microsoft.com/api/credentials/share/en-us/TakisKapasakalidis-7137/7A04EE44851187C2?sharingId=FD232711C049BAC){:target="_blank"}
 [![image-large](assets/img/certifications/github-admin.png)](https://www.credly.com/badges/fafb2056-2127-4e67-94ab-b71eb02997c4/public_url){:target="_blank"}
