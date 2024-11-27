@@ -5,13 +5,6 @@ permalink: /certifications/
 classes: wide
 ---
 
----
-# layout: certifications
-title: certifications
-permalink: /certifications/
-classes: wide
----
-
 | Certification Provider | Certification | Link |
 |------------------------|---------------|------|
 | <span style="font-size: 1.2em; vertical-align: middle;">GitHub</span> | <span style="font-size: 1.2em; vertical-align: middle;">GitHub Copilot</span> | [![image-small](assets/img/certifications/github-copilot.png){:style="width:100px;"}](https://www.credly.com/badges/c1c3225f-1ff9-4619-8a3a-1926cdaace2b/public_url){:target="_blank"} |
